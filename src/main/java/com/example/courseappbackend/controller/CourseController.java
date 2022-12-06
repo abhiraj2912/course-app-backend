@@ -1,6 +1,7 @@
 package com.example.courseappbackend.controller;
 
 import com.example.courseappbackend.model.Courses;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,5 +17,10 @@ public class CourseController {
         System.out.println(c.getDuration());
         System.out.println(c.getDate());
         return "Course added Successfully";
+    }
+
+    @GetMapping("/view")
+    public String ViewCourse(){
+        return "View All Courses";
     }
 }
